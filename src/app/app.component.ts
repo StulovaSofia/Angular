@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
       width: '30%',
       data: row
     }).afterClosed().subscribe(val => {
-      if (val === 'update') {
+      if (val === 'Update') {
         this.getAllPersons()
       }
     })

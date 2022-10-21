@@ -38,39 +38,40 @@ export class DialogComponent implements OnInit {
     }
   }
 
-  // updatePerson() {
-  //   this.api.putPerson(this.personForm.value, this.editDate.id)
-  //     .subscribe({
-  //       next: (res) => {
-  //         alert("Person updated successfully")
-  //         this.personForm.reset();
-  //         this.dialogRef.close('Update');
-  //       },
-  //       error: () => {
-  //         alert("Error while updating person");
-  //       }
-  //     })
-  // }
+  updatePerson() {
+    this.api.putPerson(this.personForm.value, this.editDate.id)
+      .subscribe({
+        next: (res) => {
+          alert("Person updated successfully")
+          this.personForm.reset();
+          this.dialogRef.close('Update');
+        },
+        error: () => {
+          alert("Error while updating person");
+        }
+      })
+  }
 
   addPerson() {
-    // if (this.editDate) {
-    if (this.personForm.valid) {
-      this.api.postPerson(this.personForm.value)
-        .subscribe({
-          next: (res) => {
-            alert("Person added successfully")
-            this.personForm.reset();
-            this.dialogRef.close('save');
-          },
-          error: () => {
-            alert("Error while adding person")
-          }
-        });
+    if (!this.editDate) {
+      if (this.personForm.valid) {
+        this.api.postPerson(this.personForm.value)
+          .subscribe({
+            next: (res) => {
+              alert("Person added successfully");
+              this.personForm.reset();
+              this.dialogRef.close('save');
+            },
+            error: () => {
+              alert("Error while adding person")
+            }
+          });
+      } else {
+        this.updatePerson()
+      }
+    } else {
+      this.updatePerson()
     }
   }
 }
 
-// } else {
-//   this.updatePerson();
-// }
-// }

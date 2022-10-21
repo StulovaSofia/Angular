@@ -1,28 +1,12 @@
 {
   "personList": [
     {
-      "firstName": "Cofaa",
-      "lastName": "stulova",
+      "firstName": "Соня",
+      "lastName": "Стулова",
       "email": "stulova.2004@mail.ru",
-      "age": 33,
+      "age": 222222222,
       "gender": "Male",
-      "id": 20
-    },
-    {
-      "firstName": "Cofaa",
-      "lastName": "stulovaaaa",
-      "email": "stulova.2004@mail.ru",
-      "age": 33,
-      "gender": "Male",
-      "id": 21
-    },
-    {
-      "firstName": "Cofaa",
-      "lastName": "stulova",
-      "email": "stulova.2004@mail.ru",
-      "age": 33,
-      "gender": "Female",
-      "id": 22
+      "id": 30
     }
   ],
   "comments": [
