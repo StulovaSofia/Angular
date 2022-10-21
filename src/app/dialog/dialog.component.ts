@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ApiService} from '../services/api.service';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
@@ -10,7 +10,6 @@ import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 })
 
 export class DialogComponent implements OnInit {
-
   personForm !: FormGroup;
   actionBtn: string = 'Save'
 

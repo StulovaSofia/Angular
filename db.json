@@ -1,12 +1,20 @@
 {
   "personList": [
     {
-      "firstName": "Соня",
-      "lastName": "Стулова",
-      "email": "stulova.2004@mail.ru",
-      "age": 222222222,
+      "firstName": "Anna",
+      "lastName": "Ivanova",
+      "email": "giydekagni@vusra.com",
+      "age": 33,
+      "gender": "Female",
+      "id": 33
+    },
+    {
+      "firstName": "Oleg",
+      "lastName": "Ananasov",
+      "email": "Oleg@gmail.com",
+      "age": 18,
       "gender": "Male",
-      "id": 30
+      "id": 34
     }
   ],
   "comments": [
