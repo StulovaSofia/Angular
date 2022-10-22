@@ -38,17 +38,21 @@ export class DialogComponent implements OnInit {
   }
 
   updatePerson() {
-    this.api.putPerson(this.personForm.value, this.editDate.id)
-      .subscribe({
-        next: (res) => {
-          alert("Person updated successfully")
-          this.personForm.reset();
-          this.dialogRef.close('Update');
-        },
-        error: () => {
-          alert("Error while updating person");
-        }
-      })
+    if (this.personForm.valid) {
+      this.api.putPerson(this.personForm.value, this.editDate.id)
+        .subscribe({
+          next: (res) => {
+            alert("Person updated successfully");
+            this.personForm.reset();
+            this.dialogRef.close('save');
+          },
+          error: () => {
+            alert("Error while updating person")
+          }
+        });
+    } else {
+      alert("Not all fields are filled")
+    }
   }
 
   addPerson() {
