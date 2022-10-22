@@ -13,7 +13,9 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Enter your email</mat-label>
-      <input formControlName="email" matInput placeholder="pat@example.com" required>
+      <input formControlName="email" name="email" matInput placeholder="pat@example.com" required
+             email>
+      <mat-error *ngIf="email.invalid">Not a valid email</mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
