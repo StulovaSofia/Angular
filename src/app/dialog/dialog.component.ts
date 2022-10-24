@@ -45,16 +45,15 @@ export class DialogComponent implements OnInit {
       this.api.putPerson(this.personForm.value, this.editDate.id)
         .subscribe({
           next: (res) => {
-            alert("Person updated successfully");
             this.personForm.reset();
             this.dialogRef.close('save');
           },
           error: () => {
-            alert("Error while updating person")
+            console.log("Error while updating person")
           }
         });
     } else {
-      alert("Not all fields are filled")
+      console.log("Not all fields are filled")
     }
   }
 
@@ -64,12 +63,11 @@ export class DialogComponent implements OnInit {
         this.api.postPerson(this.personForm.value)
           .subscribe({
             next: (res) => {
-              alert("Person added successfully");
               this.personForm.reset();
               this.dialogRef.close('save');
             },
             error: () => {
-              alert("Error while adding person")
+              console.log("Error while adding person")
             }
           });
       } else {

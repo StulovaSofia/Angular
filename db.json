@@ -4,7 +4,7 @@
       "firstName": "Anna",
       "lastName": "Ivanova",
       "email": "giydekagni@vusra.com",
-      "age": 38,
+      "age": 28,
       "gender": "Female",
       "id": 33
     },
@@ -12,8 +12,8 @@
       "firstName": "Oleg",
       "lastName": "Ananasov",
       "email": "Oleg@gmail.com",
-      "age": 19,
-      "gender": "Male",
+      "age": 20,
+      "gender": "Female",
       "id": 34
     }
   ],

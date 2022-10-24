@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
           this.dataSource.sort = this.sort;
         },
         error: (err) => {
-          alert("Error while getting persons")
+          console.log("Error while getting persons")
         }
       })
   }
@@ -58,9 +58,7 @@ export class AppComponent implements OnInit {
       width: '30%',
       data: row
     }).afterClosed().subscribe(val => {
-      if (val === 'Update') {
-        this.getAllPersons()
-      }
+      this.getAllPersons()
     })
   }
 
@@ -68,11 +66,10 @@ export class AppComponent implements OnInit {
     this.api.deletePerson(id)
       .subscribe({
         next: (res) => {
-          alert("Person deleted successfully")
           this.getAllPersons()
         },
         error: () => {
-          alert("Error while deleting person")
+          console.log("Error while deleting person")
         }
       })
   }
