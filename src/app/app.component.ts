@@ -5,6 +5,7 @@ import {ApiService} from "./services/api.service";
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,7 @@ export class AppComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
 
 
-  constructor(private dialog: MatDialog, private api: ApiService) {
+  constructor(private dialog: MatDialog, private api: ApiService, private toastr: ToastrService) {
 
   }
 
@@ -55,11 +56,13 @@ export class AppComponent implements OnInit {
       width: '30%',
       data: row
     }).afterClosed().subscribe(val => {
+      this.toastr.success('', 'Edit successfully');
       this.getAllPersons()
     })
   }
 
   deletePerson(id: number) {
+    this.toastr.success('', 'Deleted successfully');
     this.api.deletePerson(id)
       .subscribe({
         next: (res) => {

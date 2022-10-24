@@ -19,6 +19,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
+import {ToastrModule} from "ngx-toastr";
+import {CommonModule} from "@angular/common";
+
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import {MatSortModule} from '@angular/material/sort';
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
