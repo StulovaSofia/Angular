@@ -47,13 +47,8 @@ export class DialogComponent implements OnInit {
           next: (res) => {
             this.personForm.reset();
             this.dialogRef.close('save');
-          },
-          error: () => {
-            console.log("Error while updating person")
           }
         });
-    } else {
-      console.log("Not all fields are filled")
     }
   }
 
@@ -65,9 +60,6 @@ export class DialogComponent implements OnInit {
             next: (res) => {
               this.personForm.reset();
               this.dialogRef.close('save');
-            },
-            error: () => {
-              console.log("Error while adding person")
             }
           });
       } else {

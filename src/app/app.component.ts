@@ -36,9 +36,6 @@ export class AppComponent implements OnInit {
           this.dataSource = new MatTableDataSource(res);
           this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
-        },
-        error: (err) => {
-          console.log("Error while getting persons")
         }
       })
   }
@@ -67,9 +64,6 @@ export class AppComponent implements OnInit {
       .subscribe({
         next: (res) => {
           this.getAllPersons()
-        },
-        error: () => {
-          console.log("Error while deleting person")
         }
       })
   }
