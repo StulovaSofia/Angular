@@ -56,13 +56,13 @@ export class AppComponent implements OnInit {
       width: '30%',
       data: row
     }).afterClosed().subscribe(val => {
-      this.toastr.success('Edit successfully', '');
+      this.toastr.success('Successfully edited', '');
       this.getAllPersons()
     })
   }
 
   deletePerson(id: number) {
-    this.toastr.success('Deleted successfully', '');
+    this.toastr.success('Successfully deleted', '');
     this.api.deletePerson(id)
       .subscribe({
         next: (res) => {
